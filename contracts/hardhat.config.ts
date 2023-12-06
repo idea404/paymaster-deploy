@@ -25,7 +25,9 @@ const getNetworkConfig = () => {
           url: "https://sepolia.era.zksync.dev",
           ethNetwork: "sepolia",
           zksync: true,
-        };
+          verifyURL:
+          "https://explorer.sepolia.era.zksync.dev/contract_verification",
+      };
     case "testnet":
       return {
         url: "https://zksync2-testnet.zksync.dev",

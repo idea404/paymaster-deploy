@@ -20,6 +20,12 @@ const getNetworkConfig = () => {
         ethNetwork: "goerli",
         zksync: true,
       };
+    case "sep":
+        return {
+          url: "https://sepolia.era.zksync.dev",
+          ethNetwork: "sepolia",
+          zksync: true,
+        };
     case "testnet":
       return {
         url: "https://zksync2-testnet.zksync.dev",
@@ -38,7 +44,7 @@ const networkConfig = getNetworkConfig();
 
 const config: HardhatUserConfig = {
   zksolc: {
-    version: "latest",
+    version: "1.3.17",
     settings: {},
   },
   defaultNetwork: "zkSyncTestnet",
